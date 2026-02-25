@@ -9,6 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\stockflow-application\stockflow.application.csproj" />
+    <ProjectReference Include="..\stockflow.infrastructure\stockflow.infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
