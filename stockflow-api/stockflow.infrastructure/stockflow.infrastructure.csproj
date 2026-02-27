@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\stockflow.domain\stockflow.domain.csproj" />
+  </ItemGroup>
+
 </Project>
