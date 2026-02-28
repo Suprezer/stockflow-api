@@ -13,6 +13,7 @@ public class User
 
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
+    public bool IsActive { get; private set; } = true;
 
     // EF Core
     private User() { }
