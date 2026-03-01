@@ -11,8 +11,11 @@ namespace stockflow.domain.Entities
         public string Name { get; private set; }
         public string Address { get; private set; }
 
+
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
+
+        public bool IsActive { get; private set; }
 
         // EF Core
         private StorageLocation() { }
@@ -29,6 +32,24 @@ namespace stockflow.domain.Entities
         public void Rename(string newName)
         {
             Name = newName.Trim();
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void UpdateAddress(string newAddress)
+        {
+            Address = newAddress.Trim();
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void Deactivate()
+        {
+            IsActive = false;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void Activate()
+        {
+            IsActive = true;
             UpdatedAt = DateTime.UtcNow;
         }
     }
