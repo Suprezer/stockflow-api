@@ -15,4 +15,8 @@
     <ProjectReference Include="..\stockflow.domain\stockflow.domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistence\" />
+  </ItemGroup>
+
 </Project>
