@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace stockflow_api.Controllers
 {
@@ -10,7 +9,7 @@ namespace stockflow_api.Controllers
         [HttpGet]
         public IActionResult GetUsers()
         {
-            // Placeholder for getting users logic
+            // Placeholder for fetching all users
             return Ok(new[] { "User1", "User2", "User3" });
         }
     }
