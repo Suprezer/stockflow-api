@@ -16,5 +16,23 @@ namespace stockflow_api.Controllers
         public IActionResult GetProduct(int id) {
             return Ok($"Product{id}");
         }
+
+        [HttpPost]
+        public IActionResult CreateProduct([FromBody] CreateProductRequest request)
+        {
+            return CreatedAtAction(nameof(GetProduct), new { id = 1 }, "ProductCreated");
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateProduct(int id, [FromBody] UpdateProductRequest request)
+        {
+            return Ok($"Product{id} updated");
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteProduct(int id)
+        {
+            return NoContent();
+        }
     }
 }
